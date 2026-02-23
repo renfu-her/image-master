@@ -36,6 +36,20 @@ const Navbar: React.FC = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center gap-3">
+            {/* Buy Me A Coffee */}
+            <a 
+              href="https://buymeacoffee.com/renfuherb" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity flex items-center"
+            >
+              <img 
+                src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+                alt="Buy Me A Coffee" 
+                className="h-8"
+              />
+            </a>
+
             {/* Theme Toggle */}
             <button 
                 onClick={toggleTheme}
@@ -74,6 +88,19 @@ const Navbar: React.FC = () => {
           </div>
           
           <div className="flex items-center gap-2 md:hidden">
+             {/* Buy Me A Coffee Mobile */}
+             <a 
+               href="https://buymeacoffee.com/renfuherb" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               className="hover:opacity-80 transition-opacity flex items-center mr-1"
+             >
+               <img 
+                 src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+                 alt="Buy Me A Coffee" 
+                 className="h-7"
+               />
+             </a>
              <button 
                 onClick={toggleTheme}
                 className="p-2 rounded-lg text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800"

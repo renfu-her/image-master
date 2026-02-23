@@ -5,9 +5,14 @@ import ToolCard from '../components/ToolCard';
 const Dashboard: React.FC = () => {
   const [filter, setFilter] = useState<'all' | 'edit' | 'convert' | 'ai'>('all');
 
-  const filteredTools = filter === 'all' 
+  const filteredTools = (filter === 'all' 
     ? TOOLS 
-    : TOOLS.filter(t => t.category === filter);
+    : TOOLS.filter(t => t.category === filter))
+    .sort((a, b) => {
+      if (a.isNew && !b.isNew) return -1;
+      if (!a.isNew && b.isNew) return 1;
+      return 0;
+    });
 
   return (
     <div className="min-h-screen pb-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
